@@ -1,12 +1,35 @@
-#include <iostream>
 #include "list.hpp"
 
-using namespace std;
+int main(){
 
-int main() {
-    List l;
+    Lista l;
+	Item aux;
+	string line;
+	ifstream my_file;
 
-    l.printList();
+	menu();
 
-    return 0;
+	FLVazia(&l);
+	cout << "Lista criada.\n\n";
+
+	my_file.open("Names.txt");
+
+	if(my_file.is_open()){
+		while(! my_file.eof()){
+			getline(my_file, line);
+			aux.nome = line;
+			LInsert(&l, aux);
+		}
+		my_file.close();
+		cout << "\n\n";
+	}
+
+	else{
+		cout << "Arquivo não abriu.\n";
+	} 
+
+	Compara(&l);
+	LImprime(&l);
+
+	return 0;
 }
