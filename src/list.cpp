@@ -1,12 +1,5 @@
 #include "list.hpp"
 
-void Swap(Item *a, Item *b){
-	Item aux;
-	aux = *a;
-	*a  = *b;
-	*b  = aux;
-}
-
 void FLVazia(Lista *l){
 	l->first = 0;
 	l->last  = 0;
@@ -21,24 +14,7 @@ void LInsert(Lista *l, Item d){
 	}
 }
 
-void LRemove(Lista *l, Item d){
-	bool ok = false;
-
-	if(l->first == l->last)
-		cout << "Lista vazia!" << endl;
-	else{
-		for(int i=l->first; i<l->last; i++)
-			if(l->vet[i].nome == d.nome){
-				Swap(&l->vet[i], &l->vet[i+1]);
-				ok = true;	
-			}
-	
-		if(ok)
-			l->last --;
-	}
-}
-
-void readText(Lista l, Item d){
+void readText(Lista *l, Item d){
 	string line;
 	ifstream my_file;
 
@@ -48,7 +24,7 @@ void readText(Lista l, Item d){
 		while(! my_file.eof()){
 			getline(my_file, line);
 			d.nome = line;
-			LInsert(&l, d);
+			LInsert(l, d);
 		}
 		my_file.close();
 		cout << "\n";
@@ -61,10 +37,9 @@ void readText(Lista l, Item d){
 
 void Compare(Lista *l){
 	for(int i = l->first; i < l->last; i++){
-		for(int j = l->first; j < l->last - 1; j++){
+		for(int j = i+1; j < l->last - 1; j++){
 			if((i != j) && (l->vet[i].nome == l->vet[j].nome)){
 				l->vet[j].nome = "\0";
-				l->vet[i].contador += 1;
 			}
 		}
 	}
