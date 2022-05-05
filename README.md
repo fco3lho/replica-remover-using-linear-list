@@ -2,9 +2,15 @@
 
 O seguinte código tem a finalidade de criar uma lista linear que consiga armazenar um conjunto de 100 nomes quaisquer encontrados em um arquivo com extensão <code>.txt</code>, e após isso, conseguir identificar e remover nomes replicados/iguais na lista, sem mover os ponteiros.
 
+## Sobre o código
+
+Foi utilizando um arquivo <code>.txt</code>, encontrado também no repositório, contendo 100 nomes para testar o código. Foi utilizado como parâmetro a quebra de linha dentro do arquivo para a separação e tokenização dos nomes, inserindo-os assim, na lista linear.
+
+Após a inserção dos nomes à lista, foi feita a comparação do 1º nome com os nomes de 2 a 100, o 2º nome com os nomes de 3 a 100, e assim por diante até feita todas as comparações.
+
 <ul>
  <li><strong><h3>Como você gerenciaria os espaços em branco para novas inserções?</h3></strong></li>
-    Foi feito um gerenciamento no código de atribuir o valor <code>NULL</code> usando <code>"/0"</code> às posições da lista que possuíam nome replicado. Sendo assim, fica fácil para fazer novas inserções nos espações em branco, criando uma condição onde só poderá fazer uma nova inserção em uma posição que contenha como <i>string</i> o valor <code>"\0"</code>.
+    Foi feito um gerenciamento no código de atribuir o valor <code>NULL</code> usando <code>"\0"</code> às posições da lista que possuíam nome replicado. Sendo assim, fica fácil para fazer novas inserções nos espações em branco, criando uma condição onde só poderá fazer uma nova inserção em uma posição que contenha como <i>string</i> o valor <code>"\0"</code>.
     
  <li><strong><h3>Qual seria o custo dessas novas inserções?</h3></strong></li>
     O custo para fazer apenas uma nova inserção, terá o custo do caminhamento do elemento inicial da lista até encontrar o primeiro elemento da lista que contenha como <i>string</i> o valor <code>"\0"</code>, com isso, é possível ter um parâmetro do custo de uma inserção que teria como <strong>melhor caso</strong>: <i>1</i>, <strong>caso médio</strong>: <i>n/2</i> e no <strong>pior caso</strong>: <i>n</i>.
