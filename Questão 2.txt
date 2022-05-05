@@ -1,8 +1,0 @@
-Programa em C++
-
-1- Ler o arquivo com 100 nomes
-2- Salvar os 100 nomes em um vetor de strings usando struct que contenha nome, contador e um analisador
-3- Comparar vet[0] com vet[0] a vet[99], incluindo contador na condição, onde se o nome for igual, é somado 1 no contador e a struct do vetor comparado é adicionado um analisador. STRUCT (NOME, CONTADOR, BOOLEANO).
-4- Printar os nomes encontrados com seus respectivos números de repetições 
-
-struct(nome, contador, booleano)

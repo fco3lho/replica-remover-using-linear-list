@@ -3,32 +3,34 @@
 int main(){
 
     Lista l;
-	Item aux;
+	Item name;
 	string line;
 	ifstream my_file;
 
 	menu();
 
 	FLVazia(&l);
-	cout << "Lista criada.\n\n";
+	cout << "Lista criada.\n";
 
-	my_file.open("Names.txt");
+	// readText(&l, name);
+
+	my_file.open("Names2.txt");
 
 	if(my_file.is_open()){
 		while(! my_file.eof()){
 			getline(my_file, line);
-			aux.nome = line;
-			LInsert(&l, aux);
+			name.nome = line;
+			LInsert(&l, name);
 		}
 		my_file.close();
-		cout << "\n\n";
+		cout << "\n";
 	}
 
 	else{
 		cout << "Arquivo não abriu.\n";
 	} 
 
-	Compara(&l);
+	Compare(&l);
 	LImprime(&l);
 
 	return 0;

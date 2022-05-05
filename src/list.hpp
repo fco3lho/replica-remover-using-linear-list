@@ -3,14 +3,13 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#define MAXTAM 101
+#define MAXTAM 100
 
 using namespace std;
 
 typedef struct Item{
     string nome;
     int contador = 0;
-    int analisador = 0;
 }Item;
 
 typedef struct Lista{
@@ -26,6 +25,7 @@ void Swap(Item *a, Item *b);
 void LImprime(Lista *l);
 
 void menu();
-void Compara(Lista *l);
+void readText(Lista *l, Item d);
+void Compare(Lista *l);
 
 #endif

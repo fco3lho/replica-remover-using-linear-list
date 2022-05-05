@@ -38,36 +38,45 @@ void LRemove(Lista *l, Item d){
 	}
 }
 
-void Compara(Lista *l){
+void readText(Lista l, Item d){
+	string line;
+	ifstream my_file;
+
+	my_file.open("Names2.txt");
+
+	if(my_file.is_open()){
+		while(! my_file.eof()){
+			getline(my_file, line);
+			d.nome = line;
+			LInsert(&l, d);
+		}
+		my_file.close();
+		cout << "\n";
+	}
+
+	else{
+		cout << "Arquivo não abriu.\n";
+	} 
+}
+
+void Compare(Lista *l){
 	for(int i = l->first; i < l->last; i++){
-		for(int j = l->first; j < l->last; j++){
-			if((j != i) && (l->vet[i].nome == l->vet[j].nome)){
-				l->vet[j].analisador = 1;
+		for(int j = l->first; j < l->last - 1; j++){
+			if((i != j) && (l->vet[i].nome == l->vet[j].nome)){
+				l->vet[j].nome = "\0";
 				l->vet[i].contador += 1;
 			}
 		}
-
-		//for(int k = l->first; i < l->last; i++){
-		// 	if(l->vet[k].analisador == 1){
-		// 		l->vet[k].nome = "\0";
-		// 	}
-		//}
-
-		//if(l->vet[i].nome != "\0"){
-		// 		
-		//}
 	}
 
-	for(int i=l->first; i<l->last; i++)
-		cout << l->vet[i].contador << endl;
-	cout << endl;	
-
-	// cout << l->vet[i].nome << ": "<< l->vet[i].contador << endl;		DÁ ERRO
+	cout << "Comparação feita.\n\n";
 }
 
 void LImprime(Lista *l){
+	cout << "____________________________________" << endl;
+	cout << "\tIMPRESSÃO DA LISTA\n\n";
 	for(int i=l->first; i<l->last; i++)
-		cout << l->vet[i].nome << endl;
+		cout << i << " - " << l->vet[i].nome << endl;
 	cout << endl;
 }
 
