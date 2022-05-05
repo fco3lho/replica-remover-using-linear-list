@@ -18,7 +18,7 @@ void readText(Lista *l, Item d){
 	string line;
 	ifstream my_file;
 
-	my_file.open("Names2.txt");
+	my_file.open("Names.txt");
 
 	if(my_file.is_open()){
 		while(! my_file.eof()){
@@ -38,7 +38,7 @@ void readText(Lista *l, Item d){
 void Compare(Lista *l){
 	for(int i = l->first; i < l->last; i++){
 		for(int j = i+1; j < l->last - 1; j++){
-			if((i != j) && (l->vet[i].nome == l->vet[j].nome)){
+			if(l->vet[i].nome == l->vet[j].nome){
 				l->vet[j].nome = "\0";
 			}
 		}
