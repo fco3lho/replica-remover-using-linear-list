@@ -7,8 +7,6 @@ int main(){
 	string line;
 	ifstream my_file;
 
-	menu();
-
 	FLVazia(&l);
 	cout << "Lista criada.\n";
 

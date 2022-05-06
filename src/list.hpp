@@ -21,7 +21,6 @@ void FLVazia(Lista *l);
 void LInsert(Lista *l, Item d);
 void LImprime(Lista *l);
 
-void menu();
 void readText(Lista *l, Item d);
 void Compare(Lista *l);
 

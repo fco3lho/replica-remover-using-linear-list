@@ -54,11 +54,3 @@ void LImprime(Lista *l){
 		cout << i << " - " << l->vet[i].nome << endl;
 	cout << endl;
 }
-
-void menu(){
-	cout << "\tMENU\n\n";
-	cout << "1 - Insere na lista\n";
-	cout << "2 - Remove da lista\n";
-	cout << "3 - Imprime a lista\n";
-	cout << "0 - Finaliza programa\n\n"; 
-}
