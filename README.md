@@ -4,9 +4,11 @@ O seguinte código tem a finalidade de criar uma lista linear que consiga armaze
 
 ## Sobre o código
 
-Foi utilizando um arquivo <code>.txt</code>, encontrado também no repositório, contendo 100 nomes para testar o código. Foi utilizado como parâmetro a quebra de linha dentro do arquivo para a separação e tokenização dos nomes, inserindo-os assim, na lista linear.
+Foi utilizado um arquivo <code>.txt</code>, encontrado também no repositório (<code>Names.txt</code>), contendo 100 nomes para testar o código. Foi utilizado como parâmetro a quebra de linha dentro do arquivo para a separação dos nomes, inserindo-os assim, na lista linear.
 
 Após a inserção dos nomes à lista, foi feita a comparação do 1º nome com os nomes de 2 a 100, o 2º nome com os nomes de 3 a 100, e assim por diante até feita todas as comparações.
+
+<strong>Observação: É possível mudar o arquivo que deseja analisar, basta ir em <i>list.cpp</i>, na função <code>void readText(Lista *l, Item d)</code>, e mudar o parâmetro <code>my_file.open("Names.txt")</code> para <code>my_file.open("NomeDoSeuArquivo.txt")</code>.</strong>
 
 <ul>
  <li><strong><h3>Como você gerenciaria os espaços em branco para novas inserções?</h3></strong></li>
