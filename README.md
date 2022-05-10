@@ -12,7 +12,7 @@ Após a inserção dos nomes à lista, foi feita a comparação do 1º nome com 
 
 <ul>
  <li><strong><h3>Como você gerenciaria os espaços em branco para novas inserções?</h3></strong></li>
-    Foi feito um gerenciamento no código de atribuir o valor <code>NULL</code> usando <code>"\0"</code> às posições da lista que possuíam nome replicado. Sendo assim, fica fácil para fazer novas inserções nos espações em branco, criando uma condição onde só poderá fazer uma nova inserção em uma posição que contenha como <i>string</i> o valor <code>"\0"</code>.
+    Foi feito um gerenciamento no código de atribuir o valor <code>NULL</code> usando <code>"\0"</code> às posições da lista que possuíam nome replicado. Sendo assim, fica fácil para fazer novas inserções nos espaços em branco, criando uma condição onde só poderá fazer uma nova inserção em uma posição que contenha como <i>string</i> o valor <code>"\0"</code>.
     
  <li><strong><h3>Qual seria o custo dessas novas inserções?</h3></strong></li>
     O custo para fazer apenas uma nova inserção, terá o custo do caminhamento do elemento inicial da lista até encontrar o primeiro elemento da lista que contenha como <i>string</i> o valor <code>"\0"</code>, com isso, é possível ter um parâmetro do custo de uma inserção que teria como <strong>melhor caso</strong>: <i>1</i>, <strong>caso médio</strong>: <i>n/2</i> e no <strong>pior caso</strong>: <i>n</i>.
