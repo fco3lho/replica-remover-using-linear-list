@@ -36,8 +36,8 @@ void readText(Lista *l, Item d){
 }
 
 void Compare(Lista *l){
-	for(int i = l->first; i < l->last; i++){
-		for(int j = i+1; j < l->last - 1; j++){
+	for(int i = l->first; i < l->last - 1; i++){
+		for(int j = i+1; j < l->last; j++){
 			if(l->vet[i].nome == l->vet[j].nome){
 				l->vet[j].nome = "\0";
 			}
