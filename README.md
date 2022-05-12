@@ -33,7 +33,7 @@ O repositório possui um arquivo <i>Makefile</i> que realiza todo o procedimento
   </tr>
   <tr>
     <td><code>make</code></td>
-    <td>Executa a compilação do programa utilizando o gcc, e o resultado vai para a pasta build.</td>
+    <td>Executa a compilação do programa utilizando o g++, e o resultado vai para a pasta build.</td>
   </tr>
   <tr>
     <td><code>make run</code></td>
